@@ -1,0 +1,55 @@
+#cloud:
+#  aws:
+#    credentials:
+#      access-key: AKIA3G7Q7GCQMSHEO5ZX
+#      secret-key: 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
+#    region:
+#      static: ca-central-1
+#    stack:
+#      auto: false
+#    s3:
+#      endpointUrl: https://S3.ca-central-1.amazonaws.com
+#
+#application:
+#  bucket:
+#    name: eduhubcontent
+#
+#spring:
+#  servlet:
+#    multipart:
+#      enabled: true
+#      file-size-threshold: 500MB
+#      max-file-size: 700MB
+#      max-request-size: 800MB
+#
+#server:
+#  port: 9090
+
+cloud:
+  aws:
+    credentials:
+      access-key: AKIA3G7Q7GCQMSHEO5ZX
+      secret-key: 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
+    region:
+      static: ca-central-1
+    stack:
+      auto: false
+amazon:
+  s3:
+    endpointUrl: https://s3.ca-central-1.amazonaws.com
+    bucketName: eduhubcontent
+    courseImageFolder: "course-images"
+application:
+  bucket:
+    name: eduhubcontent
+
+spring:
+  servlet:
+    multipart:
+      enabled: true
+      file-size-threshold: 500MB
+      max-file-size: 700MB
+      max-request-size: 800MB
+
+server:
+  port: 9090
