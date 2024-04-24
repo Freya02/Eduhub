@@ -1,0 +1,32 @@
+version: 1
+
+backend:
+  phases:
+    preBuild: 
+      commands:
+      - echo "🚧 Installing backend dependencies..."
+      - cd backend
+      - npm install
+    build:
+      commands:
+      - echo "✅ running backend .."
+      - npm run build
+  artifacts:
+    baseDirectory: backend/dist
+    files:
+      - '**/*'
+frontend:
+  phases:
+    preBuild: 
+      commands:
+      - echo "🚧 Installing frontend dependencies..."
+      - cd ../frontend
+      - npm install
+    build:
+      commands:
+      - echo "✅ running frontend dependencies..."
+      - npm run build
+  artifacts:
+    baseDirectory: frontend/dist
+    files:
+      - '**/*'
